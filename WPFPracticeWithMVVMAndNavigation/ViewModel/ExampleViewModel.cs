@@ -47,9 +47,6 @@ namespace WPFPracticeWithMVVMAndNavigation.ViewModel
 
     private void GoToAnotherPage()
     {
-      // TODO: Fix this
-      //var mainFrame = App.Current.MainWindow.FindName("MainFrame") as Frame;
-      //mainFrame?.Navigate(AnotherExamplePage);
     }
     #endregion
   }

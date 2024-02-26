@@ -14,9 +14,6 @@ namespace WPFPracticeWithMVVMAndNavigation.ViewModel
 
     private void NavigateToMainPage()
     {
-      // TODO: Fix this
-      //var mainFrame = App.Current.MainWindow.FindName("MainFrame") as Frame;
-      //mainFrame?.Navigate(ExamplePage);
     }
   }
 }
