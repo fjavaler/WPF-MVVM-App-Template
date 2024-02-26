@@ -42,6 +42,11 @@ namespace WPFPracticeWithMVVMAndNavigation.ViewModel
     #region Methods
     private void LoadData()
     {
+      if (Data != string.Empty)
+      {
+        Data = string.Empty;
+      }
+
       Data = _dataService.GetData().Text;
     }
 
