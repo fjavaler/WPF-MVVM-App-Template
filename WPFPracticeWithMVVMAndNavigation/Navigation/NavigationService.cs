@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPFPracticeWithMVVMAndNavigation.Navigation
+namespace WPFAppTemplate.Navigation
 {
   public class NavigationService : INavigationService
   {

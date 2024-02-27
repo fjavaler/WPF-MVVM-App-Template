@@ -1,6 +1,6 @@
-﻿using WPFPracticeWithMVVMAndNavigation.Model;
+﻿using WPFAppTemplate.Model;
 
-namespace WPFPracticeWithMVVMAndNavigation.Service
+namespace WPFAppTemplate.Service
 {
   public interface IDataService
   {

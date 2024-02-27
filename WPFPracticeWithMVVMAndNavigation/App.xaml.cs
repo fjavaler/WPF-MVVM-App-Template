@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
-using WPFPracticeWithMVVMAndNavigation.Service;
-using WPFPracticeWithMVVMAndNavigation.View;
-using WPFPracticeWithMVVMAndNavigation.ViewModel;
-using WPFPracticeWithMVVMAndNavigation.Navigation;
+using WPFAppTemplate.Service;
+using WPFAppTemplate.View;
+using WPFAppTemplate.ViewModel;
+using WPFAppTemplate.Navigation;
 
-namespace WPFPracticeWithMVVMAndNavigation
+namespace WPFAppTemplate
 {
   /// <summary>
   /// Interaction logic for App.xaml

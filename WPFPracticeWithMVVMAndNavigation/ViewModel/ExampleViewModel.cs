@@ -1,10 +1,10 @@
 ﻿using System.Windows.Input;
-using WPFPracticeWithMVVMAndNavigation.Commands;
-using WPFPracticeWithMVVMAndNavigation.Navigation;
-using WPFPracticeWithMVVMAndNavigation.Service;
-using WPFPracticeWithMVVMAndNavigation.View;
+using WPFAppTemplate.Commands;
+using WPFAppTemplate.Navigation;
+using WPFAppTemplate.Service;
+using WPFAppTemplate.View;
 
-namespace WPFPracticeWithMVVMAndNavigation.ViewModel
+namespace WPFAppTemplate.ViewModel
 {
   public class ExampleViewModel : ViewModelBase
   {

@@ -1,5 +1,5 @@
 ﻿
-namespace WPFPracticeWithMVVMAndNavigation.Navigation
+namespace WPFAppTemplate.Navigation
 {
   public interface INavigationService
   {

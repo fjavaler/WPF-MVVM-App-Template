@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
 using System.Windows.Controls;
-using WPFPracticeWithMVVMAndNavigation.Service;
-using WPFPracticeWithMVVMAndNavigation.ViewModel;
+using WPFAppTemplate.Service;
+using WPFAppTemplate.ViewModel;
 
-namespace WPFPracticeWithMVVMAndNavigation.View
+namespace WPFAppTemplate.View
 {
   /// <summary>
   /// Interaction logic for ExamplePage.xaml

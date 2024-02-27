@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using WPFPracticeWithMVVMAndNavigation.View;
+using WPFAppTemplate.View;
 
-namespace WPFPracticeWithMVVMAndNavigation
+namespace WPFAppTemplate
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml

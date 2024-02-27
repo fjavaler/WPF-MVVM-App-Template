@@ -1,9 +1,9 @@
 ﻿using System.Windows.Input;
-using WPFPracticeWithMVVMAndNavigation.Commands;
-using WPFPracticeWithMVVMAndNavigation.Navigation;
-using WPFPracticeWithMVVMAndNavigation.View;
+using WPFAppTemplate.Commands;
+using WPFAppTemplate.Navigation;
+using WPFAppTemplate.View;
 
-namespace WPFPracticeWithMVVMAndNavigation.ViewModel
+namespace WPFAppTemplate.ViewModel
 {
   public class AnotherExampleViewModel
   {

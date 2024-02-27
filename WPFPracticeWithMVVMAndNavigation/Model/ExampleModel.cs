@@ -1,4 +1,4 @@
-﻿namespace WPFPracticeWithMVVMAndNavigation.Model
+﻿namespace WPFAppTemplate.Model
 {
   public class ExampleModel
   {

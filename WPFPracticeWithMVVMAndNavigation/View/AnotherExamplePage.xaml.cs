@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
-using WPFPracticeWithMVVMAndNavigation.ViewModel;
+using WPFAppTemplate.ViewModel;
 
-namespace WPFPracticeWithMVVMAndNavigation.View
+namespace WPFAppTemplate.View
 {
   /// <summary>
   /// Interaction logic for AnotherExamplePage.xaml
