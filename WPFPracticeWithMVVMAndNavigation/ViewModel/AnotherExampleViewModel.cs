@@ -1,19 +1,25 @@
 ﻿using System.Windows.Input;
 using WPFPracticeWithMVVMAndNavigation.Commands;
+using WPFPracticeWithMVVMAndNavigation.Navigation;
+using WPFPracticeWithMVVMAndNavigation.View;
 
 namespace WPFPracticeWithMVVMAndNavigation.ViewModel
 {
   public class AnotherExampleViewModel
   {
-    public ICommand GoToMainPageCommand { get; set; }
+    private readonly INavigationService navigationService;
 
-    public AnotherExampleViewModel()
+    public ICommand GoToMainPageCommand { get; private set; }
+
+    public AnotherExampleViewModel(INavigationService navigationService)
     {
       GoToMainPageCommand = new RelayCommand(NavigateToMainPage);
+      this.navigationService = navigationService;
     }
 
     private void NavigateToMainPage()
     {
+      navigationService.Navigate<ExamplePage>();
     }
   }
 }

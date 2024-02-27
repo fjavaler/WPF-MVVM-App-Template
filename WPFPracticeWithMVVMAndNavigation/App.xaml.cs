@@ -4,6 +4,7 @@ using System.Windows;
 using WPFPracticeWithMVVMAndNavigation.Service;
 using WPFPracticeWithMVVMAndNavigation.View;
 using WPFPracticeWithMVVMAndNavigation.ViewModel;
+using WPFPracticeWithMVVMAndNavigation.Navigation;
 
 namespace WPFPracticeWithMVVMAndNavigation
 {
@@ -46,6 +47,11 @@ namespace WPFPracticeWithMVVMAndNavigation
     private static IHostBuilder CreateHostBuilder() => Host.CreateDefaultBuilder().ConfigureServices((_, services) =>
             {
               services.AddSingleton<IDataService, DataService>();
+              services.AddScoped<INavigationService>(serviceProvider =>
+              {
+                var navigationService = new NavigationService(serviceProvider);
+                return navigationService;
+              });
 
               services.AddTransient<MainWindow>();
               services.AddTransient<ExamplePage>();

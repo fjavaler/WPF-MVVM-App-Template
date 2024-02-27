@@ -1,7 +1,6 @@
-﻿using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using WPFPracticeWithMVVMAndNavigation.Commands;
+using WPFPracticeWithMVVMAndNavigation.Navigation;
 using WPFPracticeWithMVVMAndNavigation.Service;
 using WPFPracticeWithMVVMAndNavigation.View;
 
@@ -18,10 +17,15 @@ namespace WPFPracticeWithMVVMAndNavigation.ViewModel
     public string ButtonText { get; set; } = "Load Data";
 
     private readonly IDataService _dataService;
+    private readonly INavigationService _navigationService;
+    private readonly AnotherExamplePage _anotherExamplePage;
 
-    public ExampleViewModel(IDataService dataService)
+    public ExampleViewModel(IDataService dataService, INavigationService navigationService, AnotherExamplePage anotherExamplePage)
     {
       _dataService = dataService;
+      _anotherExamplePage = anotherExamplePage;
+      _navigationService = navigationService;
+
       LoadDataCommand = new RelayCommand(LoadData);
       GoToAnotherPageCommand = new RelayCommand(GoToAnotherPage);
     }
@@ -52,6 +56,7 @@ namespace WPFPracticeWithMVVMAndNavigation.ViewModel
 
     private void GoToAnotherPage()
     {
+      _navigationService.Navigate<AnotherExamplePage>();
     }
     #endregion
   }

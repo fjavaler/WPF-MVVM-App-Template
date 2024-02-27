@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 
 namespace WPFPracticeWithMVVMAndNavigation.Navigation
 {
   public class NavigationService : INavigationService
   {
-    public void NavigateTo(string uri)
+    public IServiceProvider ServiceProvider { get; set; }
+    public NavigationService(IServiceProvider serviceProvider)
     {
-      // TODO: test to see if this works.
-      var mainFrame = App.Current.MainWindow.FindName("MainFrame") as Frame;
-      mainFrame?.Navigate(new Uri(uri, UriKind.Relative));
+      ServiceProvider = serviceProvider;
+    }
+
+    public void Navigate<T>()
+    {
+      var page = ServiceProvider.GetService(typeof(T));
+      var mainFrame = App.Current.MainWindow.FindName("MainFrame") as System.Windows.Controls.Frame;
+      mainFrame?.Navigate(page);
     }
   }
 }
