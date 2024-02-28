@@ -44,7 +44,7 @@ namespace WPFAppTemplate
       }
     }
 
-    private static IHostBuilder CreateHostBuilder() => Host.CreateDefaultBuilder().ConfigureServices((_, services) =>
+    private static IHostBuilder CreateHostBuilder() => Host.CreateDefaultBuilder().ConfigureServices((context, services) =>
             {
               services.AddSingleton<IDataService, DataService>();
               services.AddScoped<INavigationService>(serviceProvider =>
