@@ -10,18 +10,18 @@ namespace WPFAppTemplate.ViewModel
   /// </summary>
   public class AnotherExampleViewModel : ViewModelBase
   {
+    #region Commands
+    /// <summary>
+    /// Command to navigate to the main page.
+    /// </summary>
+    public ICommand GoToMainPageCommand { get; private set; }
+    #endregion
+
     #region Fields
     /// <summary>
     /// Navigation service.
     /// </summary>
     private readonly INavigationService navigationService;
-    #endregion
-
-    #region Properties
-    /// <summary>
-    /// Command to navigate to the main page.
-    /// </summary>
-    public ICommand GoToMainPageCommand { get; private set; }
     #endregion
 
     #region Constructors
