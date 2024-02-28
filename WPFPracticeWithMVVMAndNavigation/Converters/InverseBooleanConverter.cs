@@ -1,13 +1,14 @@
 ﻿using System.Globalization;
-using System.Windows.Data;
+using WPFAppTemplate.Converters;
 
 namespace WpfAppTemplate.Converters
 {
   /// <summary>
   /// A converter class that inverts the boolean value of a property. 
   /// </summary>
-  public class InverseBooleanConverter : IValueConverter
+  public class InverseBooleanConverter : BaseConverter
   {
+    #region Methods
     /// <summary>
     /// Conversion method required for IValueConverter implementation.
     /// </summary>
@@ -17,7 +18,7 @@ namespace WpfAppTemplate.Converters
     /// <param name="culture">I'm not sure but is unused.</param>
     /// <returns>Inverted boolean value.</returns>
     /// <exception cref="ArgumentException">Thrown if value is not a bool.</exception>
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
       bool isBool = value is bool;
       if (isBool)
@@ -39,9 +40,10 @@ namespace WpfAppTemplate.Converters
     /// <param name="culture">Culture info.</param>
     /// <returns>Re-inverted boolean value.</returns>
     /// <exception cref="NotImplementedException">Not implemented (not needed).</exception>
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
       throw new NotImplementedException();
     }
+    #endregion
   }
 }

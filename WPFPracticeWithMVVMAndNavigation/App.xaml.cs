@@ -1,10 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
-using WPFAppTemplate.Service;
 using WPFAppTemplate.View;
 using WPFAppTemplate.ViewModel;
-using WPFAppTemplate.Navigation;
+using WPFAppTemplate.Navigation.Abstract;
+using WPFAppTemplate.Service.Concrete;
+using WPFAppTemplate.Service.Abstract;
+using WPFAppTemplate.Navigation.Concrete;
 
 namespace WPFAppTemplate
 {
@@ -13,8 +15,18 @@ namespace WPFAppTemplate
   /// </summary>
   public partial class App : Application
   {
+    #region Private Members
+    /// <summary>
+    /// The main host for the application.
+    /// </summary>
     private IHost? _host;
+    #endregion
 
+    #region Methods
+    /// <summary>
+    /// Override of the OnStartup method to start the application.
+    /// </summary>
+    /// <param name="e">Startup event arguments.</param>
     protected override async void OnStartup(StartupEventArgs e)
     {
       base.OnStartup(e);
@@ -34,6 +46,10 @@ namespace WPFAppTemplate
       }
     }
 
+    /// <summary>
+    /// Override of the OnExit method to stop the application.
+    /// </summary>
+    /// <param name="e">Exit event arguments.</param>
     protected override async void OnExit(ExitEventArgs e)
     {
       base.OnExit(e);
@@ -44,6 +60,10 @@ namespace WPFAppTemplate
       }
     }
 
+    /// <summary>
+    /// Creates the host builder for the application.
+    /// </summary>
+    /// <returns>A Host builder.</returns>
     private static IHostBuilder CreateHostBuilder() => Host.CreateDefaultBuilder().ConfigureServices((context, services) =>
             {
               services.AddSingleton<IDataService, DataService>();
@@ -59,5 +79,6 @@ namespace WPFAppTemplate
               services.AddTransient<AnotherExamplePage>();
               services.AddSingleton<AnotherExampleViewModel>();
             });
+    #endregion
   }
 }
