@@ -55,9 +55,9 @@ namespace WPFAppTemplate
 
               services.AddTransient<MainWindow>();
               services.AddTransient<ExamplePage>();
-              services.AddTransient<ExampleViewModel>();
+              services.AddSingleton<ExampleViewModel>();
               services.AddTransient<AnotherExamplePage>();
-              services.AddTransient<AnotherExampleViewModel>();
+              services.AddSingleton<AnotherExampleViewModel>();
             });
   }
 }
