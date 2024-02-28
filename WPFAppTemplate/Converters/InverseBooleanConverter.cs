@@ -1,7 +1,6 @@
 ﻿using System.Globalization;
-using WPFAppTemplate.Converters;
 
-namespace WpfAppTemplate.Converters
+namespace WPFAppTemplate.Converters
 {
   /// <summary>
   /// A converter class that inverts the boolean value of a property. 
