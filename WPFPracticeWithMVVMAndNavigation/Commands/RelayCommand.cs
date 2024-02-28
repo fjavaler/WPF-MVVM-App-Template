@@ -2,6 +2,9 @@
 
 namespace WPFAppTemplate.Commands
 {
+  /// <summary>
+  /// A command that can be executed.
+  /// </summary>
   public class RelayCommand : ICommand
   {
     #region Fields
