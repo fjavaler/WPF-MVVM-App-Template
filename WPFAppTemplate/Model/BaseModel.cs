@@ -1,11 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace WPFAppTemplate.ViewModel
+namespace WPFAppTemplate.Model
 {
-  /// <summary>
-  /// Base class for all view models.
-  /// </summary>
-  public class ViewModelBase : INotifyPropertyChanged
+  public class BaseModel : INotifyPropertyChanged
   {
     #region Events
     /// <summary>
@@ -19,7 +16,7 @@ namespace WPFAppTemplate.ViewModel
     /// Raises the PropertyChanged event.
     /// </summary>
     /// <param name="propertyName"></param>
-    protected virtual void OnPropertyChanged(string propertyName)
+    public void OnPropertyChanged(string propertyName)
     {
       PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }

@@ -3,7 +3,7 @@
   /// <summary>
   /// Example model class.
   /// </summary>
-  public class ExampleModel
+  public class ExampleModel : BaseModel
   {
     #region Properties
     /// <summary>

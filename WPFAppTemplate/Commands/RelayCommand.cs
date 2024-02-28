@@ -5,7 +5,7 @@ namespace WPFAppTemplate.Commands
   /// <summary>
   /// A command that can be executed.
   /// </summary>
-  public class RelayCommand : ICommand
+  public class RelayCommand : BaseCommand
   {
     #region Fields
     /// <summary>
@@ -18,10 +18,8 @@ namespace WPFAppTemplate.Commands
     /// </summary>
     private readonly Func<bool> _canExecute;
 
-    /// <summary>
-    /// The event that is fired when the <see cref="CanExecute(object)"/> value changes.
-    /// </summary>
-    public event EventHandler CanExecuteChanged;
+    /// <inheritdoc/>
+    public override event EventHandler? CanExecuteChanged;
     #endregion
 
     #region Constructors
@@ -44,7 +42,7 @@ namespace WPFAppTemplate.Commands
     /// </summary>
     /// <param name="parameter">Parameter.</param>
     /// <returns>True if can execute.</returns>
-    public bool CanExecute(object parameter)
+    public override bool CanExecute(object parameter)
     {
       return _canExecute?.Invoke() ?? true;
     }
@@ -53,7 +51,7 @@ namespace WPFAppTemplate.Commands
     /// Executes the command.
     /// </summary>
     /// <param name="parameter">Parameter.</param>
-    public void Execute(object parameter)
+    public override void Execute(object parameter)
     {
       _execute();
     }
