@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Windows.Controls;
-using WPFAppTemplate.Service;
+﻿using System.Windows.Controls;
 using WPFAppTemplate.ViewModel;
 
 namespace WPFAppTemplate.View
