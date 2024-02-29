@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WPFAppTemplate.Model
+namespace WPFAppTemplate
 {
-  public class BaseModel : INotifyPropertyChanged
+  public class ObservableObject : INotifyPropertyChanged
   {
     #region Events
     /// <summary>
@@ -38,7 +38,7 @@ namespace WPFAppTemplate.Model
     /// Raises the PropertyChanged event.
     /// </summary>
     /// <param name="propertyName"></param>
-    public void OnPropertyChanged(string propertyName)
+    protected virtual void OnPropertyChanged(string propertyName)
     {
       PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }

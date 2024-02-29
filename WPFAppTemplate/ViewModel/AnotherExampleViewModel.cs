@@ -8,7 +8,7 @@ namespace WPFAppTemplate.ViewModel
   /// <summary>
   /// View model for the AnotherExamplePage.
   /// </summary>
-  public class AnotherExampleViewModel : ViewModelBase
+  public class AnotherExampleViewModel : ObservableObject
   {
     #region Commands
     /// <summary>
