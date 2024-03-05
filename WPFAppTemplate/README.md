@@ -18,4 +18,5 @@ WPF app template targeting .NET 8.
 13. Delete Example model and Example service IDataService if you're not going to use it.
 14. Rename Example Pages in View folder.
 15. Rename Example View Models in ViewModel folder.
+16. Remove any of the services found in the Services folder that you will not be using.
 *If things aren't working correctly (like bindings, commands, etc.) verify that all references to "WpfAppTemplate" have been removed.*
