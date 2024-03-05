@@ -16,6 +16,7 @@
   <ItemGroup>
     <Folder Include="Fonts\" />
     <Folder Include="Images\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 
 </Project>

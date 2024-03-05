@@ -15,4 +15,7 @@ WPF app template targeting .NET 8.
 10. Rename the project to name of new app.
 11. Rename the solution to name of new app.
 12. Search for and rename all references to "WpfAppTemplate" with the chosen name for the Application.
+13. Delete Example model and Example service IDataService if you're not going to use it.
+14. Rename Example Pages in View folder.
+15. Rename Example View Models in ViewModel folder.
 *If things aren't working correctly (like bindings, commands, etc.) verify that all references to "WpfAppTemplate" have been removed.*
