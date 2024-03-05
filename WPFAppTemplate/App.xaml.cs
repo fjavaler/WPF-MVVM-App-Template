@@ -72,6 +72,8 @@ namespace WPFAppTemplate
                 var navigationService = new NavigationService(serviceProvider);
                 return navigationService;
               });
+              services.AddTransient<ILoggingService, LoggingService>();
+              services.AddTransient<ISoundService, SoundService>();
 
               services.AddTransient<MainWindow>();
               services.AddTransient<ExamplePage>();
