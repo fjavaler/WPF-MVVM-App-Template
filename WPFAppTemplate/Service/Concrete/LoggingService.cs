@@ -12,55 +12,55 @@ namespace WPFAppTemplate.Service.Concrete
     /// <inheritdoc/>
     public void Log(string message)
     {
-      Console.WriteLine(message);
+      Console.WriteLine("> " + message);
     }
 
     /// <inheritdoc/>
     public void Log(string message, Exception exception)
     {
-      Console.WriteLine(message, exception);
+      Console.WriteLine("> " + message, exception);
     }
 
     /// <inheritdoc/>
     public void Log(Exception exception)
     {
-      Console.WriteLine(exception);
+      Console.WriteLine("> " + exception);
     }
 
     /// <inheritdoc/>
     public void LogDebug(string message)
     {
-      Debug.WriteLine(message);
+      Debug.WriteLine("> Debug: " + message);
     }
 
     /// <inheritdoc/>
     public void LogDebug(string message, Exception exception)
     {
-      Debug.WriteLine(message, exception);
+      Debug.WriteLine("> Debug: " + message, exception);
     }
 
     /// <inheritdoc/>
     public void LogDebug(Exception exception)
     {
-      Debug.WriteLine(exception);
+      Debug.WriteLine("> Debug: " + exception);
     }
 
     /// <inheritdoc/>
     public void LogError(string message)
     {
-      Console.Error.WriteLine(message);
+      Debug.WriteLine("> ERROR: " + message);
     }
 
     /// <inheritdoc/>
     public void LogError(string message, Exception exception)
     {
-      Console.Error.WriteLine(message, exception);
+      Debug.WriteLine("> ERROR: " + message, exception);
     }
 
     /// <inheritdoc/>
     public void LogError(Exception exception)
     {
-      Console.Error.WriteLine(exception);
+      Debug.WriteLine("> ERROR: " + exception);
     }
     #endregion
   }

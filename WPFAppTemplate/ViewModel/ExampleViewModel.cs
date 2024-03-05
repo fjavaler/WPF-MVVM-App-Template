@@ -60,6 +60,11 @@ namespace WPFAppTemplate.ViewModel
     private readonly INavigationService _navigationService;
 
     /// <summary>
+    /// Logging service.
+    /// </summary>
+    private readonly ILoggingService _loggingService;
+
+    /// <summary>
     /// Another example page.
     /// </summary>
     private readonly AnotherExamplePage _anotherExamplePage;
@@ -72,14 +77,17 @@ namespace WPFAppTemplate.ViewModel
     /// <param name="dataService">The data service.</param>
     /// <param name="navigationService">The navigation service.</param>
     /// <param name="anotherExamplePage">Another example page.</param>
-    public ExampleViewModel(IDataService dataService, INavigationService navigationService, AnotherExamplePage anotherExamplePage)
+    public ExampleViewModel(IDataService dataService, INavigationService navigationService, ILoggingService loggingService, AnotherExamplePage anotherExamplePage)
     {
       _dataService = dataService;
       _anotherExamplePage = anotherExamplePage;
       _navigationService = navigationService;
+      _loggingService = loggingService;
 
       LoadDataCommand = new RelayCommand(LoadData);
       GoToAnotherPageCommand = new RelayCommand(GoToAnotherPage);
+
+      _loggingService.LogDebug("ExampleViewModel created.");
     }
     #endregion
 
