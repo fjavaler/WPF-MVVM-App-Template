@@ -17,7 +17,7 @@ namespace WPFAppTemplate.Converters
     /// <param name="culture">I'm not sure but is unused.</param>
     /// <returns>Inverted boolean value.</returns>
     /// <exception cref="ArgumentException">Thrown if value is not a bool.</exception>
-    public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public override object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
       bool isBool = value is bool;
       if (isBool)
@@ -39,7 +39,7 @@ namespace WPFAppTemplate.Converters
     /// <param name="culture">Culture info.</param>
     /// <returns>Re-inverted boolean value.</returns>
     /// <exception cref="NotImplementedException">Not implemented (not needed).</exception>
-    public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public override object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
       throw new NotImplementedException();
     }

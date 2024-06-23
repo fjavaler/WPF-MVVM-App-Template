@@ -10,7 +10,7 @@ namespace WPFAppTemplate.Converters
   {
     #region Methods
     /// <inheritdoc />
-    public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public override object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
       var booleanValue = (bool)value;
       if (booleanValue)
@@ -22,7 +22,7 @@ namespace WPFAppTemplate.Converters
     }
 
     /// <inheritdoc />
-    public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public override object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
       throw new NotImplementedException();
     }

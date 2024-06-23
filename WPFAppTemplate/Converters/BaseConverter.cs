@@ -17,7 +17,7 @@ namespace WPFAppTemplate.Converters
     /// <param name="parameter">A parameter.</param>
     /// <param name="culture">Culture info.</param>
     /// <returns>A converted object.</returns>
-    public abstract object Convert(object value, Type targetType, object parameter, CultureInfo culture);
+    public abstract object Convert(object? value, Type targetType, object? parameter, CultureInfo culture);
 
     /// <summary>
     /// Converts a value back.
@@ -27,7 +27,7 @@ namespace WPFAppTemplate.Converters
     /// <param name="parameter">A parameter.</param>
     /// <param name="culture">Culture info.</param>
     /// <returns>A converted back object.</returns>
-    public abstract object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture);
+    public abstract object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture);
     #endregion
   }
 }
