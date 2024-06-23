@@ -16,7 +16,7 @@ namespace WPFAppTemplate.Commands
     /// <summary>
     /// The function to run to determine if the command can be executed.
     /// </summary>
-    private readonly Func<bool> _canExecute;
+    private readonly Func<bool> _canExecute = () => { return false; };
 
     /// <inheritdoc/>
     public override event EventHandler? CanExecuteChanged;
@@ -29,10 +29,13 @@ namespace WPFAppTemplate.Commands
     /// <param name="execute">An action to execute.</param>
     /// <param name="canExecute">Whether the action can execute.</param>
     /// <exception cref="ArgumentNullException">Exception.</exception>
-    public RelayCommand(Action execute, Func<bool> canExecute = null)
+    public RelayCommand(Action execute, Func<bool>? canExecute = null)
     {
       _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-      _canExecute = canExecute;
+      if (canExecute != null)
+      {
+        _canExecute = canExecute;
+      }
     }
     #endregion
 
@@ -42,7 +45,7 @@ namespace WPFAppTemplate.Commands
     /// </summary>
     /// <param name="parameter">Parameter.</param>
     /// <returns>True if can execute.</returns>
-    public override bool CanExecute(object parameter)
+    public override bool CanExecute(object? parameter)
     {
       return _canExecute?.Invoke() ?? true;
     }
@@ -51,7 +54,7 @@ namespace WPFAppTemplate.Commands
     /// Executes the command.
     /// </summary>
     /// <param name="parameter">Parameter.</param>
-    public override void Execute(object parameter)
+    public override void Execute(object? parameter)
     {
       _execute();
     }
